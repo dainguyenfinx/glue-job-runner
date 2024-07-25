@@ -1,0 +1,23 @@
+defaults:
+  worker_type: "G.4X"
+  from_date: "2024-07-23"
+  to_date: "2024-07-31"
+  number_of_workers: 2
+
+aws:
+  aws_access_key_id: "your_access_key_id"
+  aws_secret_access_key: "your_secret_access_key"
+  aws_session_token: "your_session_token"
+
+jobs:
+  non-prod-sit-db2bronze-party:
+    priority: 1
+  non-prod-sit-bronze2silver-ps-account-snp:
+    priority: 2
+  non-prod-sit-bronze2silver-satellite-posting-details:
+    priority: 3
+  non-prod-sit-bronze2silver-tm-posting-fa:
+    priority: 4
+#    worker_type: "G.2X"
+  non-prod-sit-silver2gold-f-posting-entry-fa:
+    priority: 5
